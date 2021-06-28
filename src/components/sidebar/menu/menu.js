@@ -1,16 +1,16 @@
 import { Link } from "gatsby"
 import React from "react"
-import styles from "./menu.module.scss"
+import "./menu.scss"
 
 const Menu = ({ menu }) => {
   return (
-    <div className={styles["menu"]}>
+    <div className="menu">
       {menu &&
         menu.map(item => (
           <Link
             to={item.url}
-            className={styles["menu__item"]}
-            activeClassName={styles["menu__item_active"]}
+            className="menu__item"
+            activeClassName="menu__item_active"
             key={item.url}
           >
             {item.label}

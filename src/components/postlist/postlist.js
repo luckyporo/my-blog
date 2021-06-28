@@ -1,40 +1,40 @@
 import { Link } from "gatsby"
 import React from "react"
-import styles from "./postlist.module.scss"
+import "./postlist.scss"
 
 const PostList = ({ posts, compact }) => {
   return (
-    <div className={styles["postlist"]}>
+    <div className="postlist">
       {posts.map(({ node }) => (
         <div
-          className={styles["postlist__item_wrapper"]}
+          className="postlist__item_wrapper"
           key={node.fields.slug}
         >
-          <Link to={node.fields.slug} className={styles["item"]}>
+          <Link to={node.fields.slug} className="item">
             <div
               className={
-                compact ? styles["item__info_compact"] : styles["item__info"]
+                compact ? "item__info_compact" : "item__info"
               }
             >
               <h2
                 className={
                   compact
-                    ? styles["item__info_compact__title"]
-                    : styles["item__info__title"]
+                    ? "item__info_compact__title"
+                    : "item__info__title"
                 }
               >
                 {node.frontmatter.title}
               </h2>
               {!compact && (
-                <div className={styles["item__info__description"]}>
+                <div className="item__info__description">
                   {node.frontmatter.description || node.excerpt}
                 </div>
               )}
               <div
                 className={
                   compact
-                    ? styles["item__info_compact__date"]
-                    : styles["item__info__date"]
+                    ? "item__info_compact__date"
+                    : "item__info__date"
                 }
               >
                 {node.fields.date}
@@ -42,7 +42,7 @@ const PostList = ({ posts, compact }) => {
             </div>
             {!compact && node.frontmatter.image && (
               <div
-                className={styles["item__image"]}
+                className="item__image"
                 style={{ backgroundImage: `url(${node.frontmatter.image})` }}
               ></div>
             )}

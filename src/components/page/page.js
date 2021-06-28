@@ -1,20 +1,20 @@
 import React from "react"
-import styles from "./page.module.scss"
+import "./page.scss"
 
 const Page = ({ title, image, children, nopadding }) => {
   return (
     <div>
-      <header className={styles["header"]}>
+      <header className="header">
         {image && (
           <div
-            className={styles["header__image"]}
+            className="header__image"
             style={{ backgroundImage: `url(${image})` }}
           ></div>
         )}
-        <h1 className={styles["header__title"]}>{title}</h1>
+        <h1 className="header__title">{title}</h1>
       </header>
       <section
-        className={styles["content"]}
+        className="content"
         style={
           nopadding && {
             paddingRight: 0,

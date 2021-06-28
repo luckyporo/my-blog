@@ -7,7 +7,7 @@ import Menu from "./menu"
 import SiteMeta from "./sitemeta"
 import SocialLinks from "./social-links"
 import TOC from "./toc"
-import styles from "./sidebar.module.scss"
+import "./sidebar.scss"
 
 const Sidebar = ({ toc }) => {
   const { site } = useStaticQuery(
@@ -22,16 +22,10 @@ const Sidebar = ({ toc }) => {
               label
             }
             social {
-              douban
               email
-              facebook
               github
-              instagram
-              linkedin
               rss
-              telegram
               twitter
-              youtube
             }
             footerHTML
           }
@@ -46,10 +40,10 @@ const Sidebar = ({ toc }) => {
   }
 
   return (
-    <div className={styles.sidebar + (open ? " " + styles.open : "")}>
-      <div className={styles.mobileNav}>
-        <BiMenu className={styles.mobileNav__icon} onClick={clickHandler} />
-        <Link className={styles.mobileNav__title} to="/">
+    <div className={"sidebar" + (open ? " " + open : "")}>
+      <div className="mobileNav">
+        <BiMenu className="mobileNav__icon" onClick={clickHandler} />
+        <Link className="mobileNav__title" to="/">
           {site.siteMetadata.title}
         </Link>
       </div>

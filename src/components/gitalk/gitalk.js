@@ -3,11 +3,11 @@ import "./style-fix.scss"
 
 import Gitalk from "gatsby-plugin-gitalk"
 import React from "react"
-import styles from "./gitalk.module.scss"
+import "./gitalk.scss"
 
 const MyGitalk = ({ title, id }) => {
   return (
-    <div className={styles["gitalk"]}>
+    <div className="gitalk">
       <Gitalk
         options={{
           id,

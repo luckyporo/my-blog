@@ -1,27 +1,27 @@
 module.exports = {
   siteMetadata: {
-    title: `清风朗月`,
+    title: `luckyporo`,
     image: "/gatsby-icon.png",
-    description: `Gatsby Starter Breeze`,
+    description: `A full stack developer`,
     siteUrl: `https://gatsby-starter-breeze.netlify.app/`,
     social: {
-      douban: "#",
-      email: "#",
-      facebook: "#",
-      github: "#",
-      instagram: "#",
-      linkedin: "#",
+      // douban: "#",
+      email: "zhinian0209@gmail.com",
+      // facebook: "#",
+      github: "luckyporo",
+      // instagram: "#",
+      // linkedin: "#",
       rss: "/rss.xml",
-      telegram: "#",
-      twitter: "#",
-      youtube: "#",
+      // telegram: "#",
+      twitter: "luckyporo",
+      // youtube: "#",
     },
     sidebarMenu: [
       { url: "/archive/", label: "归档" },
       { url: "/tags/", label: "标签" },
       { url: "/about", label: "About" },
     ],
-    footerHTML: `© 2020 <a href="https://github.com/keithnull">Keith Null</a> All rights reserved.`,
+    footerHTML: `© 2021 <a href="https://github.com/luckyporo">luckyporo</a> All rights reserved.`,
     dateFormat: `YYYY-MM-DD`,
     language: `zh`,
   },
@@ -66,12 +66,12 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     //trackingId: `ADD YOUR TRACKING ID HERE`,
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -126,7 +126,7 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
-            title: "清风朗月",
+            title: "luckyporo",
           },
         ],
       },
@@ -135,11 +135,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Breeze`,
-        short_name: `Breeze`,
+        name: `luckyporo Blog`,
+        short_name: `luckyporo`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#00AA90`,
         display: `minimal-ui`,
         icon: `static/gatsby-icon.png`,
       },
@@ -153,22 +153,22 @@ module.exports = {
         display: "swap",
       },
     },
-    {
-      resolve: "gatsby-plugin-gitalk",
-      options: {
-        config: {
-          clientID: "ee045e67607d9cc5d75b",
-          clientSecret: "c0f18c2238127559210f0bf94711a5c345eea7f8",
-          repo: "gatsby-starter-breeze",
-          owner: "keithnull",
-          admin: ["keithnull"],
-          pagerDirection: "last",
-          createIssueManually: true,
-          distractionFreeMode: true,
-          enableHotKey: true,
-        },
-      },
-    },
+    // {
+    //   resolve: "gatsby-plugin-gitalk",
+    //   options: {
+    //     config: {
+    //       clientID: "ee045e67607d9cc5d75b",
+    //       clientSecret: "c0f18c2238127559210f0bf94711a5c345eea7f8",
+    //       repo: "gatsby-starter-breeze",
+    //       owner: "keithnull",
+    //       admin: ["keithnull"],
+    //       pagerDirection: "last",
+    //       createIssueManually: true,
+    //       distractionFreeMode: true,
+    //       enableHotKey: true,
+    //     },
+    //   },
+    // },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
