@@ -1,5 +1,4 @@
 import React from "react"
-import "./page.scss"
 
 type PageProp = {
   title: string;
@@ -11,17 +10,14 @@ type PageProp = {
 const Page = ({ title, image, children, nopadding }: PageProp) => {
   return (
     <div>
-      <header className="header">
+      <header className="px-11">
         {image && (
-          <div
-            className="header__image"
-            style={{ backgroundImage: `url(${image})` }}
-          ></div>
+          <div style={{ backgroundImage: `url(${image})` }}></div>
         )}
-        <h1 className="header__title">{title}</h1>
+        <h1>{title}</h1>
       </header>
       <section
-        className="content"
+        className="px-9"
         style={
           nopadding && {
             paddingRight: 0,

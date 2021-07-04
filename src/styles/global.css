@@ -66,13 +66,16 @@ button {
 
 blockquote {
   border-left: 3px solid rgba(0,170,144,0.7);
-  color: #009982;
   background: rgba(0,170,144,0.05);
-  @apply py-3 px-5 mb-4;
+  @apply py-3 px-5 mb-4 text-2xl;
+}
+
+blockquote p {
+  color: #009982;
 }
 
 blockquote ~ p {
-  @apply mb-4 text-black;
+  @apply mb-4 text-black text-xl;
 }
 
 a {

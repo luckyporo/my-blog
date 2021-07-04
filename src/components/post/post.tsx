@@ -14,8 +14,8 @@ const Post = ({ post }) => {
             style={{ backgroundImage: `url(${post.frontmatter.image})` }}
           ></div>
         )}
-        <div className="px-11 pt-3 font-semibold leading-6 not-italic">
-          <h1>
+        <div className="px-9 pt-3 font-semibold leading-6 not-italic">
+          <h1 className="mb-9">
             {post.frontmatter.title}
           </h1>
           <span className="mr-5">
