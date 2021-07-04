@@ -2,7 +2,15 @@ import React from "react"
 import SEO from "./seo"
 import "./layout.scss"
 
-const Layout = ({ title, description, socialImage, children, meta }) => {
+type LayoutProp = {
+  title: string;
+  description?: string;
+  socialImage?: string;
+  children?: any;
+  meta?: any;
+}
+
+const Layout = ({ title, description, socialImage, children, meta }: LayoutProp) => {
   return (
     <div className="layout">
       <SEO

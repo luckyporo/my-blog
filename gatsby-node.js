@@ -5,13 +5,14 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const pageTemplate = path.resolve(`./src/templates/page.js`)
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const pageTemplate = path.resolve(`./src/templates/page.tsx`)
+  const blogPost = path.resolve(`./src/templates/blog-post.tsx`)
   const postListPaginated = path.resolve(
-    `./src/templates/post-list-paginated.js`
+    `./src/templates/post-list-paginated.tsx`
   )
-  const tagsTemplate = path.resolve("src/templates/tags.js")
-  const tagsListTemplate = path.resolve("src/templates/tags-list.js")
+  const tagsTemplate = path.resolve("src/templates/tags.tsx")
+  const tagsListTemplate = path.resolve("src/templates/tags-list.tsx")
+  const archiveTemplate = path.resolve("src/templates/archive.tsx")
   const result = await graphql(
     `
       {
@@ -137,7 +138,7 @@ exports.createPages = async ({ graphql, actions }) => {
   // Make archive page
   createPage({
     path: "/archive/",
-    component: path.resolve("src/templates/archive.js"),
+    component: archiveTemplate,
     context: {
       dateFormat: dateFormat,
     },
@@ -175,7 +176,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
           error: error,
         }
       )
-      date = new Date("1999-11-26")
+      date = new Date("1996-02-09")
     } finally {
       createNodeField({
         node,

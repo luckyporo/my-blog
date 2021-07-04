@@ -1,7 +1,14 @@
 import React from "react"
 import "./page.scss"
 
-const Page = ({ title, image, children, nopadding }) => {
+type PageProp = {
+  title: string;
+  image?: string;
+  children?: any;
+  nopadding?: boolean;
+}
+
+const Page = ({ title, image, children, nopadding }: PageProp) => {
   return (
     <div>
       <header className="header">

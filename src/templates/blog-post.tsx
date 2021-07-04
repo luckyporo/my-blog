@@ -1,6 +1,6 @@
 import Layout from "../components/layout"
 import Main from "../components/main"
-import MyGitalk from "../components/gitalk"
+// import MyGitalk from "../components/gitalk"
 import Pagination from "../components/pagination"
 import Post from "../components/post"
 import React from "react"
@@ -26,9 +26,9 @@ const BlogPostTemplate = ({ data, pageContext }) => {
           nextLink={next && next.fields.slug}
           nextText={next && next.frontmatter.title + " →"}
         />
-        {!post.frontmatter.noComments && (
+        {/* {!post.frontmatter.noComments && (
           <MyGitalk id={pageContext.slug} title={post.frontmatter.title} />
-        )}
+        )} */}
       </Main>
     </Layout>
   )

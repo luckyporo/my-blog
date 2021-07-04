@@ -3,7 +3,16 @@ import { getIcon, getLink } from "./utils"
 import React from "react"
 import "./social-links.scss"
 
-const SocialLinks = ({ social }) => {
+type SocialLinkProp = {
+  social: {
+    email: string;
+    github: string;
+    rss: string;
+    twitter: string;
+  }
+}
+
+const SocialLinks = ({ social }: SocialLinkProp) => {
   return (
     <div className="social">
       <ul className="social__list">

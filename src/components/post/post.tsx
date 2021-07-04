@@ -3,8 +3,7 @@ import { FaRegCalendarAlt, FaTags } from "react-icons/fa"
 import { Link } from "gatsby"
 import React from "react"
 import "./post.scss"
-
-const _ = require("lodash")
+import { kebabCase } from "lodash"
 
 const Post = ({ post }) => {
   return (
@@ -30,7 +29,7 @@ const Post = ({ post }) => {
               <ol>
                 {post.frontmatter.tags.map(tag => (
                   <li key={tag}>
-                    <Link to={`/tags/${_.kebabCase(tag)}/`}>{tag}</Link>
+                    <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
                   </li>
                 ))}
               </ol>

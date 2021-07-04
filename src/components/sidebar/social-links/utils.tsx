@@ -14,7 +14,7 @@ import {
 
 import React from "react"
 
-export const getIcon = sitename => {
+export const getIcon = (sitename: string): JSX.Element => {
   switch (sitename) {
     case "douban":
       return <RiDoubanFill />
@@ -41,7 +41,7 @@ export const getIcon = sitename => {
   }
 }
 
-export const getLink = (sitename, username) => {
+export const getLink = (sitename: string, username: string): string => {
   switch (sitename) {
     case "douban":
       return `https://www.douban.com/people/${username}`

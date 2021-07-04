@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
-import React from "react"
-import kebabCase from "lodash/kebabCase"
+import * as React from "react"
+import { kebabCase } from "lodash"
 import "./tags.scss"
 
 const Tags = ({ tags }) => {

@@ -2,7 +2,12 @@ import { Link } from "gatsby"
 import React from "react"
 import "./postlist.scss"
 
-const PostList = ({ posts, compact }) => {
+type PostListProp = {
+  posts: any[];
+  compact?: any;
+}
+
+const PostList = ({ posts, compact }: PostListProp) => {
   return (
     <div className="postlist">
       {posts.map(({ node }) => (

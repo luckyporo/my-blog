@@ -7,9 +7,10 @@ import Menu from "./menu"
 import SiteMeta from "./sitemeta"
 import SocialLinks from "./social-links"
 import TOC from "./toc"
+import { TOCProp } from "./toc/toc"
 import "./sidebar.scss"
 
-const Sidebar = ({ toc }) => {
+const Sidebar = ({ toc }: TOCProp) => {
   const { site } = useStaticQuery(
     graphql`
       query {

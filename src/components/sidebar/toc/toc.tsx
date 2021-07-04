@@ -1,7 +1,11 @@
 import React from "react"
 import "./toc.scss"
 
-const TOC = ({ toc }) => {
+export type TOCProp = {
+  toc?: string;
+}
+
+const TOC = ({ toc }: TOCProp) => {
   if (!toc) {
     return null
   }
