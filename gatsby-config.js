@@ -154,6 +154,7 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    'gatsby-plugin-postcss',
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {

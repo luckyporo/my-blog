@@ -2,7 +2,6 @@ import { FaRegCalendarAlt, FaTags } from "react-icons/fa"
 
 import { Link } from "gatsby"
 import React from "react"
-import "./post.scss"
 import { kebabCase } from "lodash"
 
 const Post = ({ post }) => {
@@ -11,25 +10,25 @@ const Post = ({ post }) => {
       <header className="header">
         {post.frontmatter.image && (
           <div
-            className="header__image"
+            className="w-full h-72 max-h-96 -mt-5 bg-no-repeat bg-center bg-cover"
             style={{ backgroundImage: `url(${post.frontmatter.image})` }}
           ></div>
         )}
-        <div className="header__info">
-          <h1 className="header__info__title">
+        <div className="px-11 pt-3 font-semibold leading-6 not-italic">
+          <h1>
             {post.frontmatter.title}
           </h1>
-          <span className="header__info__date">
-            <FaRegCalendarAlt className="icon" />
+          <span className="mr-5">
+            <FaRegCalendarAlt className="inline mr-2 mb-1 my-0" />
             {post.fields.date}
           </span>
           {post.frontmatter.tags && (
-            <span className="header__info__tags">
-              <FaTags className="icon" />
-              <ol>
+            <span>
+              <FaTags className="inline mr-2 mb-1 my-0" />
+              <ol className="p-0 inline">
                 {post.frontmatter.tags.map(tag => (
-                  <li key={tag}>
-                    <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                  <li key={tag} className="inline-block mr-2 shadow-sm hover:shadow-none">
+                    <Link to={`/tags/${kebabCase(tag)}/`} className="no-underline">{tag}</Link>
                   </li>
                 ))}
               </ol>

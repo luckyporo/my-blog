@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+  font-size: 30px;
+  @apply my-5 mx-auto font-bold;
+}
+
+h2 {
+  font-size: 24px;
+  @apply my-5 mx-auto font-bold;
+}
+
+h3, h4 {
+  font-size: 21px;
+  @apply my-5 mx-auto font-bold;
+}
+
+h5 {
+  font-size: 20px;
+  @apply my-3 mx-auto;
+}
+
+h6 {
+  font-size: 19px;
+  @apply my-3 mx-auto;
+}
+
+::selection {
+  background: rgba(0,170,144, 0.4);
+}
+
+body {
+  background-color: #FCFCFC;
+  font-family: "Noto Serif SC", serif;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  /* color: #005548; */
+  @apply p-0 m-0 text-black;
+}
+
+* {
+  /* color: #005548; */
+  @apply box-border break-words text-black;
+}
+
+textarea,
+select,
+input,
+button {
+  @apply outline-none;
+}
+
+table {
+  -webkit-overflow-scrolling: touch;
+  color: #212529;
+  @apply table-fixed block w-full overflow-x-auto mb-4;
+}
+
+button {
+  cursor: hand;
+  cursor: pointer;
+}
+
+blockquote {
+  border-left: 3px solid rgba(0,170,144,0.7);
+  color: #009982;
+  background: rgba(0,170,144,0.05);
+  @apply py-3 px-5 mb-4;
+}
+
+blockquote ~ p {
+  @apply mb-4 text-black;
+}
+
+a {
+  color: #00AA90;
+}
+
+a:hover {
+  color: #009982;
+  @apply underline;
+}
+
+li > p {
+  @apply mb-0;
+}
+
+code,
+kbd {
+  background: rgba(0,170,144,0.07) !important;
+  padding: 2px 5px;
+  border-radius: 3px;
+  @apply text-black py-px px-1 rounded-sm;
+}
+
+pre {
+  color: black;
+  background: rgba(0,170,144,0.07);
+  padding: 12px 15px;
+  border-radius: 5px;
+}
+
+pre > * {
+  background: none !important;
+}
+
+pre > code {
+  @apply p-0;
+}
+
+.content {
+  @apply p-9 text-base break-words;
+}
+
+.content img {
+  @apply max-w-full rounded-md overflow-hidden;
+}
