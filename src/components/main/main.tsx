@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import "./main.scss"
 
 const Main = ({ children }) => {
