@@ -17,7 +17,7 @@ type Meta = {
 
 const SEO = ({ description = '', lang = '', meta = [], title, socialImage }: {
   description: string;
-  lang: string;
+  lang?: string;
   meta: Meta[];
   title: string;
   socialImage: string;
