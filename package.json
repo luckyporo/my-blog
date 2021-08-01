@@ -56,8 +56,10 @@
     "url": "git+https://github.com/keithnull/gatsby-starter-breeze.git"
   },
   "scripts": {
-    "build": "gatsby build",
+    "build": "rm -rf ./public && gatsby build",
     "develop": "gatsby develop",
+    "deploy": "tcb hosting deploy ./public -e blog-2gohrfh0c9aa060c",
+    "clear": "tcb hosting delete -d -e blog-2gohrfh0c9aa060c",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
